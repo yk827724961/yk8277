@@ -1,18 +1,18 @@
-all_msg=a_msg;        %ËùÓĞ¿ÉÄÜµÄĞÅºÅ
-all_msg_gf=gf(all_msg,3); %½«ËùÓĞµÄĞÅºÅÓ³Éäµ½GFÓò
-all_code_msg=rs_rscode(all_msg_gf) ; %¶ÔËùÓĞµÄĞÅºÅ½øĞĞRS±àÂë£¬µÃµ½ËùÓĞÕıÈ·µÄ±àÂë
+all_msg=a_msg;        %æ‰€æœ‰å¯èƒ½çš„ä¿¡å·
+all_msg_gf=gf(all_msg,3); %å°†æ‰€æœ‰çš„ä¿¡å·æ˜ å°„åˆ°GFåŸŸ
+all_code_msg=rs_rscode(all_msg_gf) ; %å¯¹æ‰€æœ‰çš„ä¿¡å·è¿›è¡ŒRSç¼–ç ï¼Œå¾—åˆ°æ‰€æœ‰æ­£ç¡®çš„ç¼–ç 
 msg=rand(5,3);
-msg=floor(msg*8) %²úÉúËæ»úµÄ5×éĞÅºÅ
-MSG=gf(msg,3); %½«²úÉúµÄ5×éĞÅºÅÓ³Éäµ½GFÓò
-code=rs_rscode(MSG) %¶Ô5×éĞÅºÅ½øĞĞ±àÂë£¬µÃµ½5×éÕıÈ·µÄRSÂë
+msg=floor(msg*8) %äº§ç”Ÿéšæœºçš„5ç»„ä¿¡å·
+MSG=gf(msg,3); %å°†äº§ç”Ÿçš„5ç»„ä¿¡å·æ˜ å°„åˆ°GFåŸŸ
+code=rs_rscode(MSG) %å¯¹5ç»„ä¿¡å·è¿›è¡Œç¼–ç ï¼Œå¾—åˆ°5ç»„æ­£ç¡®çš„RSç 
 a=zeros(5,5);
 b=floor(rand(5,2)*8);
 noise=[a,b];
-NOISE=gf(noise,3); %²úÉúÔëÉùĞÅºÅ
-in_msg=code+NOISE %¼ÓÔë
-for ii = 1:5 %¶Ô5×éĞÅºÅ½øĞĞÒëÂë
+NOISE=gf(noise,3); %äº§ç”Ÿå™ªå£°ä¿¡å·
+in_msg=code+NOISE %åŠ å™ª
+for ii = 1:5 %å¯¹5ç»„ä¿¡å·è¿›è¡Œè¯‘ç 
 new_msg(ii,:) = rs_rrscode(in_msg(ii,:),all_code_msg,all_msg);
 end
-new_msg%ÒëÂëÊä³ö
-num_same = same(msg,new_msg); %ÒëÂëÕıÈ·¸öÊı
-num =num_same/15 %ÒëÂëÕıÈ·ÂÊ
+new_msg%è¯‘ç è¾“å‡º
+num_same = same(msg,new_msg); %è¯‘ç æ­£ç¡®ä¸ªæ•°
+num =num_same/15 %è¯‘ç æ­£ç¡®ç‡%%%%%%%%
