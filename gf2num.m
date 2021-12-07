@@ -1,4 +1,4 @@
-%¼ÆËãGFÓòÄÚÃ¿¸öÂëÔªÓë¡°0¡±Âë×ÖµÄÂë¾à£¬ ²¢Ó³ÉäÔÚ³ÉÊµÊı×Ó³ÌĞò£º
+%è®¡ç®—GFåŸŸå†…æ¯ä¸ªç å…ƒä¸â€œ0â€ç å­—çš„ç è·ï¼Œ å¹¶æ˜ å°„åœ¨æˆå®æ•°å­ç¨‹åºï¼š
 function distance = gf2num(gf_a)
 distance = -1;
 if (gf_a == gf(0,3)) distance = 0; end
@@ -9,3 +9,4 @@ if (gf_a == gf(4,3)) distance = 4; end
 if (gf_a == gf(5,3)) distance = 5; end
 if (gf_a == gf(6,3)) distance = 6; end
 if (gf_a == gf(7,3)) distance = 7; end
+%%%%
